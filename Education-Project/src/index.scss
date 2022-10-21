@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import '~bootstrap';
+@import 'variables';
+
+
+
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+body{
+    background: #f4f4f4;
+    font-family: $mainFontFamile;
+    font-weight: bold;
+}
+
+.header{
+    width: 100%;
+    margin-top: 84px;
+
+    .menu-list{
+        display: flex;
+        justify-content: flex-end;
+        
+        li{
+            font-size: $mainFontSize + 8;
+            font-weight: bold;
+            text-align: center;
+            padding: 35px;
+            height: 71px;
+            display: flex;
+            align-items: center;
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .list-item-1{
+            border-right: 1px solid #000;
+            a{
+                color: #9f9f9f;
+            }
+        }
+
+        .list-item-2{
+            a{
+                background: $mainColor;
+                height: 81px;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                padding: 47px;
+
+                .facomment{
+                    padding-right: 20px;
+                    font-size: $mainFontSize * 3;
+                }
+            }
+        }
+    }
+}
+
+.nbheader{
+    font-size: $mainFontSize + 5;
+    font-weight: 600px;
+    padding: 116px 0px;
+
+    a{
+        color: #7b7b7b;
+
+    }
+    a.active{
+        color: $mainColor;
+    }
+    
+    .nav{
+        display: flex;
+        justify-content: center;
+        li{
+            padding: 0px 20px;
+        }
+    }
+}
+
+    /*Footer*/
+
+.footer{
+    .mainfooter{
+        background:  #ff7300;
+        padding: 30px 0px;
+    
+        h3{
+            font-size: 33.3px;
+            font-weight: 800;
+            color: #fff;
+        }
+    
+        ul{
+            font-size: 29.2px;
+            line-height: 1.95;
+            text-align: left;
+            font-weight: normal;
+    
+            li{
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .copyright{
+        background: $mainColor;
+
+        .content{
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 0px;
+            color: #fff;
+
+            ul{
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            a{
+                color: #fff;
+            }
+        }
+    }
+}

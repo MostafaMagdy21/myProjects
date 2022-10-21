@@ -1,0 +1,312 @@
+@import '../../variables.scss';
+
+
+
+
+.home{
+    .about{
+        margin-bottom: 232px;
+        h1{
+            font-size: 84.2px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #39374d;
+        }
+    
+        p{
+            font-size: 28px;
+            line-height: 1.34;
+            color: #39374d;
+        }
+    
+        button{
+            border-radius: 24px;
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+            padding: 15px 50px;
+            
+        }
+    
+        .btn-primary{
+            margin-right: 25px;
+        }
+    }
+    
+    .card{
+        border-radius: 47px;
+        background-color: #ffffff;
+        margin-bottom: 64px;
+
+        .pictur{
+            background: #c5c5c5;
+            width: 223px;
+            height: 184px;
+            margin: 67px auto;
+        }
+    
+        .card-title{
+            font-size: $mainFontSize + 10.5;
+            font-weight: bold;
+            line-height: 1.2;
+            color: #39374d;
+        }
+    
+       .card-text{
+            font-size: $mainFontSize + 5;
+            font-weight: normal;
+            line-height: 1.44;
+            color: #000000;
+       }
+
+    // choose between btn or Link
+
+       /* button{
+            width: 210px;
+            height: 61px;
+            border-radius: 24px;
+            background-color: #e1e1e1;
+
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+            color: #003edd;
+
+       } */
+        .btn-link{
+            width: 210px;
+            height: 61px;
+            border-radius: 24px;
+            background-color: #e1e1e1;
+
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: center;
+            color: #003edd;
+
+            text-decoration: none;
+        }
+    }
+
+    .col-one{
+        margin-top: 356px;
+    }
+
+
+    .col-two{
+        margin-top: 63px;
+    }
+
+    .col-three{
+        margin-top: 499px;
+    }
+
+    .choose{
+        margin-top: 133px;
+
+        .Choose-Your-Path{
+            h3{
+                font-size: 62.1px;
+                font-weight: 800;
+                line-height: 1.2;
+                color: #39374d;
+            }
+    
+            p{
+                font-size: 28px;
+                line-height: 1.34;
+                color: #39374d;
+                font-weight: normal;
+                margin: 40px 0px;
+            }
+    
+            .Path{
+                display: flex;
+                .Path-1{
+                    width: 70px;
+                    height: 70px;
+                    border: solid 1px #707070;
+                    background-color: #3e50a2;
+                    border-radius: 50%;
+                    margin: 0px 24px;
+                }
+        
+                .Path-2{
+                    width: 70px;
+                    height: 70px;
+                    border: solid 1px #707070;
+                    background-color: #ffcc00;
+                    border-radius: 50%;
+                    margin: 0px 24px;
+                }
+            }
+        }
+    
+        .Rectangle-4{
+            height: 532px;
+            border-radius: 36px;
+            background-color: #ebebeb;
+            margin: 0px 30px;
+
+            h3{
+                font-size: 60px;
+                line-height: 1.38;
+                font-weight: normal;
+                color: #39374d;
+                margin: 310px 0px 42px;
+            }
+        }
+
+        .Rectangle-4-copy{
+            height: 340px;
+            border-radius: 36px;
+            background-color: #ebebeb;
+            margin-top: 120px;
+
+            h3{
+                font-size: 40px;
+                font-weight: normal;
+                line-height: 1.36;
+                color: #39374d;
+                margin: 217px 11px 0px;
+            }
+        }
+    }
+    
+    .Color-Fill-1 {
+        background-color: #3e50a2;
+        height: 430px;
+        margin-top: 122px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .Subscribe{
+            line-height: 2.35;
+            text-align: left;
+            color: #ffffff;
+
+            h5{
+            font-weight: 800;
+            font-size: 37.5px;
+            }
+
+            h3{
+            font-weight: 800;
+            font-size: 64.5px;
+            }
+        }
+
+        .email{
+            padding-top: 65px;
+
+            input{
+                width: 100%;
+                height: 65px;
+                border-radius: 24px;
+            }
+            
+        }
+
+        .button{
+            padding-top: 65px;
+
+            button{
+                width: 160px;
+                height: 65px;
+                border-radius: 24px;
+            }
+        }
+        
+      }
+
+    .info{
+        margin: 121px 0px;
+        display: flex;
+        .row{
+            justify-content: center;
+        }
+        .blue{
+            line-height: 1.27;
+            text-align: left;
+
+            h3.About-our-experience{
+                font-size: 60px;
+                font-weight: 800;
+                color: $secondColor;
+                padding-bottom: 100px;
+            }
+
+            .blue-box{
+                background: $mainColor;
+                border-radius: 50px;
+                margin-bottom: 100px;
+                h3{
+                    font-size: 69.7px;
+                    font-weight: 800;
+                    color: #ffffff;
+                    padding: 95px 95px 10px 50px;
+                }
+
+                p{
+                    font-size: 29.2px;
+                    color: #ffffff;
+                    padding: 0px 95px 95px 50px;
+                    font-weight: normal;
+                }
+            }
+
+            .more{
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 1.2;
+                text-align: center;
+                background: $secondColor;
+                color: #fffefe;
+                padding: 18px 64px;
+                border-radius: 20px;
+                margin: 50px 115px;
+            }
+        }
+
+        .yellow{
+            .line{
+                width: 100%;
+                border-bottom: 5px solid $secondColor;
+            }
+
+            p.Lorem-Ipsum{
+                font-size: 29.2px;
+                font-weight: normal;
+                line-height: 1.43;
+                text-align: left;
+                color: #313131;
+                margin: 45px 0px 145px 5px;
+            }
+            .blue-box{
+                display: block;
+                width: 100%;
+                height: 662px;
+                padding: 50px;
+                border-radius: 37px;
+                background: $secondColor;
+
+                div.yellow-box{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    border-radius: 37px;
+                    background-color: #c5c5c5;
+                }
+            }
+        }
+    }
+
+    // .Rectangle{
+        
+    // }
+}
