@@ -1,0 +1,62 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	/* overflow: hidden; */
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+
+.brand-color {
+	color: #b45b43;
+}
+
+.btn {
+	border-radius: 10px;
+	background-color: #b45b43;
+	color: #fff;
+}
+
+.btn:hover {
+	background-color: #9e523d;
+	color: #fff;
+}
+
+.nav-btn {
+	border-radius: 5px;
+	border-color: #b45b43;
+}
+
+.nav-btn:hover {
+	background-color: #b45b43;
+	color: white;
+}
+
+.title {
+	font-size: 2rem;
+	font-weight: bold;
+	position: relative;
+}
+
+.title::after {
+	content: "";
+	background-color: #b45b43;
+	width: 200px;
+	height: 4px;
+	position: absolute;
+	top: 100%;
+	right: 41%;
+}
+
+.post-img {
+	width: 200px;
+}
