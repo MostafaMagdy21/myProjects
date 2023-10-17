@@ -1,0 +1,104 @@
+@import "../../globalFiles/vars.scss";
+
+.card-color-1 {
+	background-image: $card-color-1;
+}
+.card-color-2 {
+	background-image: $card-color-2;
+}
+.card-color-3 {
+	background-image: $card-color-3;
+}
+.card-color-4 {
+	background-image: $card-color-4;
+}
+
+.card-container {
+	margin: 1.5em 0px;
+	display: flex;
+	// justify-content: center;
+}
+
+.card-view {
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.2rem;
+	margin: 0px;
+	box-shadow: 5px 5px 8px #999;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	.icon {
+		font-size: 30px;
+		display: flex;
+		align-items: center;
+	}
+	.num {
+		font-size: 24px;
+	}
+}
+
+.card-view:hover {
+	border: 2px solid #ddd;
+	transition: 0.5s;
+}
+
+.earinig-card {
+	width: 96%;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.card-grop-1 {
+	width: 92% !important;
+	margin: 0 auto;
+	padding-left: 0px !important;
+	.card-view:hover {
+		scale: 1.1;
+	}
+}
+
+.ml-1 {
+	margin-left: 1%;
+}
+
+.card-grop-2 {
+	width: 92% !important;
+	margin: 1.5em auto !important;
+	padding-left: 0px !important;
+
+	.card-view:hover {
+		scale: 1.1;
+	}
+	.card-view {
+		border: 1px solid #ddf;
+		height: 11rem;
+		background-color: $w-bg-color;
+		color: #000;
+		text-align: left;
+		padding: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.card-content {
+			p {
+				font-size: 15px;
+				font-weight: bold;
+			}
+			.icon {
+				font-size: 30px;
+				color: $w-main-color;
+			}
+		}
+		.num {
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			font-size: 25px;
+		}
+	}
+}

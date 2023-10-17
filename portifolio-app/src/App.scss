@@ -1,0 +1,77 @@
+@import "bootstrap";
+@import "./vars";
+
+.App {
+	.header {
+		height: 60px;
+		background-color: $main-color;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 20px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		z-index: 90;
+		.logo {
+			font-size: 30px;
+			text-decoration: none;
+			color: $white-color;
+			font-weight: 700;
+			span {
+				color: $sec-color;
+			}
+		}
+		.list {
+			ul {
+				li {
+					padding: 8px 12px;
+					a {
+						color: $white-color !important;
+					}
+				}
+				li:hover {
+					background-color: $sec-color;
+					transition: 0.2s;
+					font-size: larger;
+				}
+			}
+		}
+	}
+
+	.footer {
+		background-color: $main-color;
+		height: 100vh;
+		color: $white-color;
+		padding-top: 5em;
+		line-height: 30px;
+		text-align: right;
+		h2 {
+			color: $sec-color;
+			padding-bottom: 30px;
+		}
+		p {
+			padding: 15px 0px;
+		}
+		h6 {
+			padding: 15px 0px;
+		}
+		.icon {
+			color: $sec-color;
+			font-size: 1.2em;
+			padding: 5px;
+		}
+		.copy-write {
+			border-top: 1px solid #999;
+			color: #999;
+			.cname {
+				color: $sec-color;
+			}
+		}
+		.icon-1 {
+			color: $sec-color;
+			font-size: 4em;
+		}
+	}
+}

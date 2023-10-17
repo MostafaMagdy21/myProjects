@@ -1,0 +1,64 @@
+@import "./globalFiles/vars.scss";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.App {
+	text-align: left;
+	background-color: $w-bg-color;
+	.fram {
+		display: flex;
+	}
+	.master-div {
+		width: 83%;
+	}
+	.body-page {
+		background: #f5f7fb;
+		margin: 2.2em 1em 0px;
+		padding: 2em 1.5em;
+		border-radius: 5px;
+		max-height: calc(100vh - 15vh);
+		overflow: scroll;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $w-text-color;
+}
+a.hover {
+	color: $w-bg-color;
+}
+a:active {
+	color: $w-main-color;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	.input-group {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		width: 100%;
+		padding: 1em;
+		button.btn.btn-primary.col-4 {
+			margin-bottom: 1em;
+		}
+	}
+}
+.table-data {
+	height: 35vh;
+	overflow: scroll;
+	margin: 2em 1em;
+	button {
+		margin-left: 5px;
+		padding: 5px 10px;
+	}
+}

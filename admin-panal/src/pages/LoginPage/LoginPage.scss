@@ -1,0 +1,46 @@
+@import "../../globalFiles/vars.scss";
+
+.login-form {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	background-image: url("../../imgs/2.avif");
+	background-repeat: no-repeat;
+	background-size: 60vw;
+	background-position: right top;
+	background-color: #fff;
+
+	.login-row {
+		padding-top: 8vh;
+		.img {
+			font-size: 4rem;
+			margin: 30px 15px;
+			color: $w-main-color;
+			span {
+				font-size: 3rem;
+				font-weight: bold;
+			}
+		}
+	}
+
+	form {
+		line-height: 80px;
+		width: 35vw;
+		.submit-btn {
+			background-color: $w-main-color;
+		}
+		div {
+			padding: 5px 0px;
+		}
+	}
+}
+
+.error {
+	border: 1px solid $error-color;
+}
+
+.error-color {
+	color: $error-color;
+}

@@ -1,0 +1,17 @@
+.search {
+	display: flex;
+	align-items: center;
+}
+
+.input-group {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+	padding: 1em;
+}
+
+button.btn.btn-primary.col-4 {
+	margin-bottom: 1em;
+}
