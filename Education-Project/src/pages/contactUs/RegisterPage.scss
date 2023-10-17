@@ -1,0 +1,22 @@
+.regesterPage{
+    form{
+        margin-bottom: 50px;
+    }   
+
+    .regester{
+        border-radius: 24px;
+        font-size: 18px;
+        text-align: center;
+        padding: 7px 25px;
+    }
+    
+    .error{
+        border: 1px solid red;
+    }
+    
+    .username{
+        display: block;
+        color: red;
+    }
+
+}
