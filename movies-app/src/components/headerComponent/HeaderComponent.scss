@@ -1,0 +1,42 @@
+@import "../../global/vars";
+.header {
+	background-color: $main-color;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	padding-top: 8px !important;
+	.input-group {
+		border-radius: 20px;
+		svg {
+			font-size: 30px;
+		}
+	}
+	.form-control {
+		font-size: 1.5rem;
+		border-radius: 0px 20px 20px 0px !important;
+		padding: 0px 30px;
+	}
+	.input-group {
+		#basic-addon1 {
+			border-radius: 20px 0px 0px 20px;
+			svg {
+				color: $main-color;
+			}
+		}
+	}
+
+	.logo {
+		text-align: center;
+
+		img {
+			width: 120px;
+			background: transparent;
+			border-radius: 40px;
+		}
+	}
+	@media (max-width: 768px) {
+		.logo {
+			display: none;
+		}
+	}
+}

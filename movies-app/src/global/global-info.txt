@@ -1,0 +1,15 @@
+
+
+xs => {<576px}
+sm => {≥576px}
+md => {≥768px}
+lg => {≥992px}
+xl => {≥1200px}
+2xl => {≥1400px}
+
+api key = 94b4fd61c3a8941051614a43b1140a14
+
+english  = {
+    ofen => غالبا
+    sens => عندما
+}

@@ -1,0 +1,9 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}

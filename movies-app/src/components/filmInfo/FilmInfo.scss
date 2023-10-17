@@ -1,0 +1,70 @@
+@import "../../global/vars";
+
+.film-info {
+	margin: 50px 0px;
+	.row {
+		background-color: #eee;
+		border-radius: 10px;
+		margin: 10px 0px;
+
+		.film-global-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 50px 0px;
+			h2 {
+				line-height: 2rem;
+				border-bottom: 1px solid #ddd;
+				padding: 10px 0px;
+			}
+		}
+		img {
+			width: 100%;
+			border-radius: 10px;
+		}
+
+		.story {
+			padding: 30px;
+			p {
+				padding-right: 50px;
+				line-height: 2rem;
+				font-size: 1.5rem;
+				color: #7a7574;
+			}
+			@media (max-width: 420px) {
+				p {
+					padding-right: 20px;
+					line-height: 1.2rem;
+					font-size: 0.9rem;
+					color: #7a7574;
+				}
+			}
+		}
+	}
+	.buttons {
+		display: flex;
+		justify-content: center;
+		a {
+			margin: 0px 10px;
+			border-radius: 5px;
+			padding: 5px 10px;
+			width: 10rem;
+			color: #fff;
+			background-color: $main-color;
+			font-size: 1.3rem;
+			border: none;
+			text-align: center;
+		}
+		a:hover {
+			background-color: #c05213;
+		}
+		@media (max-width: 420px) {
+			a {
+				width: 7rem;
+				color: #fff;
+				font-size: 0.8rem;
+			}
+		}
+	}
+}

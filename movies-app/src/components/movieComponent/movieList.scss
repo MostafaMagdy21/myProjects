@@ -1,0 +1,52 @@
+.movieList {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 100px 0px;
+	.content {
+		margin: 10px;
+		.card {
+			width: 95% !important;
+
+			.btn {
+				color: #fff;
+				border-color: var(--bs-btn-hover-border-color);
+				border: 1px solid;
+			}
+
+			.card-body {
+				flex: 1 1 auto;
+				padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+				position: absolute;
+				height: 100%;
+				color: #ddd;
+				justify-content: center;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				z-index: -5;
+				h4,
+				h3 {
+					line-height: 3rem;
+				}
+			}
+		}
+
+		.card:hover {
+			img {
+				filter: brightness(0.3);
+				transition: 0.5s;
+			}
+			.card-body {
+				z-index: 5;
+
+				transition: 0.5s;
+			}
+		}
+	}
+}
+
+.paginate {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
