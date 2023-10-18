@@ -1,0 +1,21 @@
+@import "~bootstrap";
+@import "./globalFiles/variables.scss";
+
+.App {
+	text-align: center;
+	background-color: #fafafa;
+	font-family: "Poppins";
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: $main-color;
+}
+
+ul {
+	list-style-type: none;
+}

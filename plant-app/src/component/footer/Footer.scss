@@ -1,0 +1,60 @@
+@import "../../globalFiles/variables.scss";
+
+.footer {
+	padding: 150px 30px 30px;
+	text-align: left;
+	line-height: 32px;
+	h4 {
+		color: $main-color;
+		font-size: 1.4rem;
+	}
+
+	.la-vie-footer {
+		.logo {
+			position: relative;
+		}
+		.fluffy {
+			position: absolute;
+			left: 6%;
+			padding-top: 1%;
+		}
+		span {
+			color: $main-color;
+		}
+	}
+	.section-footer {
+		ul {
+			padding-left: 0px;
+		}
+	}
+	.contact-us-footer {
+		margin-right: 70px;
+	}
+	.sign-for-our-newletter {
+		.div-footer {
+			padding-left: 12px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			display: flex;
+			justify-content: space-between;
+
+			h6 {
+				border-bottom: 1px solid;
+				padding-left: 0px;
+			}
+			a {
+				border: 1px solid #000;
+				border-radius: 3px;
+			}
+			a:hover {
+				background: $main-color;
+				color: #fff;
+			}
+		}
+		.footer-icons.col-4 {
+			display: flex;
+			justify-content: space-around;
+			font-size: 1.3rem;
+		}
+	}
+}

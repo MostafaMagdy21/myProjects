@@ -1,0 +1,158 @@
+@import "../../globalFiles/variables.scss";
+.home-page {
+	.perfect-way-to-planet-in-home {
+		display: flex;
+		margin-top: 80px;
+		padding-right: 40px;
+		height: 751px;
+		.parant {
+			position: relative;
+			width: 100%;
+			.child-1 {
+				position: absolute;
+				right: 150px;
+				border-top: 4px solid $main-color;
+				border-right: 4px solid $main-color;
+				border-radius: 50%;
+				padding: 80px;
+				.image {
+					background-image: url("../../imges/Background\ -\ 2022-08-07T152230\ 1.png");
+					background-size: 350px;
+					background-repeat: no-repeat;
+					background-position-x: 170px;
+					height: 591px;
+					width: 591px;
+				}
+			}
+		}
+		.paragraph {
+			padding: 10px;
+			background-image: url("../../imges/Background - 2022-08-07T165619 1 (Traced).png");
+			.info {
+				display: flex;
+				justify-content: flex-end;
+				.info-icon {
+					font-size: 30px;
+					font-weight: 700;
+					background: $main-color;
+					border-radius: 50%;
+					width: 50px;
+					a {
+						color: #fff;
+					}
+				}
+			}
+			.content {
+				text-align: left;
+				h3 {
+					color: $main-color;
+					margin-top: 40px;
+					line-height: 70px;
+				}
+				.btn-explore {
+					width: 150px;
+					height: 41px;
+					color: #fff;
+					background: $main-color;
+				}
+			}
+		}
+	}
+
+	.popular-categories {
+		padding: 70px 0px 70px 40px;
+		width: 100%;
+		overflow: hidden;
+		.popular-categories-h4 {
+			width: 260px;
+			height: 160px;
+			font-weight: 300;
+			font-size: 45px;
+			line-height: 80px;
+			color: #000000;
+			display: block;
+		}
+		.popular-categories-cards {
+			padding: 40px 0px 40px 0px;
+			display: flex;
+			width: 100%;
+			.card {
+				border: none;
+				.card-body {
+					border-radius: 500px;
+					margin: 10px;
+				}
+
+				h4 {
+					font-weight: 400;
+					font-size: 35px;
+					line-height: 80px;
+				}
+			}
+		}
+	}
+
+	.best-seller {
+		padding: 70px 40px;
+		overflow: hidden;
+		.best-seller-h4 {
+			width: 270px;
+			height: 100px;
+			font-weight: 300;
+			font-size: 45px;
+			line-height: 80px;
+			color: #000000;
+			display: block;
+		}
+		.best-seller-cards {
+			padding: 40px 0px;
+			.card-2 {
+				margin-top: 120px;
+			}
+			.row {
+				flex-wrap: nowrap;
+			}
+			.card {
+				border: none;
+
+				h4 {
+					font-weight: 400;
+					font-size: 35px;
+					line-height: 80px;
+					text-align: left;
+				}
+				h5 {
+					font-size: 1.25rem;
+					text-align: left;
+					margin-top: -15px;
+				}
+			}
+		}
+	}
+
+	.blogs {
+		padding: 70px 70px;
+		text-align: left;
+		.row {
+			display: flex;
+			justify-content: center;
+		}
+		h6 {
+			color: $main-color;
+		}
+		h2 {
+			width: 280px;
+			height: 100px;
+			font-weight: bold;
+			line-height: 80px;
+			text-align: left;
+		}
+		.card.col-4 {
+			padding: 30px 20px;
+			border: none;
+		}
+		p {
+			color: #8d8d8d;
+		}
+	}
+}

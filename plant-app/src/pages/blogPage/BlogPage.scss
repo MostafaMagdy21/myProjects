@@ -1,0 +1,48 @@
+@import "../../globalFiles/variables.scss";
+.card:hover {
+	transform: scale(1.1);
+}
+.blogs-page {
+	margin-top: 70px;
+	.title {
+		display: flex;
+		justify-content: center;
+		color: #000000;
+		font-size: 2.2em;
+		font-weight: 800;
+		margin-bottom: 30px;
+	}
+	a {
+		.card {
+			background-color: #ffffff;
+			width: 21.25em;
+			box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+			border-radius: 10px;
+			padding: 25px;
+			margin: 15px;
+		}
+		.days {
+			h3 {
+				color: $main-color;
+				font-size: 1em;
+				font-weight: 300;
+			}
+		}
+		.info {
+			h4 {
+				font-size: 1.1em;
+				font-weight: 700;
+			}
+			p:hover {
+				color: $text-color;
+			}
+			p {
+				color: $text-color;
+			}
+		}
+		.image {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+}

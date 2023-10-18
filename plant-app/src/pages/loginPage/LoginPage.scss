@@ -1,0 +1,42 @@
+@import "../../globalFiles/variables.scss";
+
+.login-form {
+	padding-bottom: 150px;
+	form {
+		padding: 30px 70px;
+		line-height: 80px;
+		div {
+			padding: 15px 0px;
+		}
+		.user-name {
+			text-align: left;
+		}
+		.password {
+			text-align: left;
+		}
+
+		.other {
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 10px;
+			.remember-me label {
+				padding-left: 5px;
+			}
+			.forget-password {
+				a,
+				a:hover {
+					color: $main-color;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.error {
+	border: 1px solid $error-color;
+}
+
+.error-color {
+	color: $error-color;
+}

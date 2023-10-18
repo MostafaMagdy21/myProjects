@@ -1,0 +1,36 @@
+@import "../../globalFiles/variables.scss";
+.header {
+	display: flex;
+	color: #000;
+	font-size: large;
+	height: 80px;
+	align-items: center;
+	a:hover {
+		color: $main-color;
+		font-weight: bold;
+		transition: 0.3s;
+	}
+	.logo {
+		position: relative;
+		.fluffy {
+			position: absolute;
+			right: 46%;
+			top: 20%;
+		}
+	}
+	.header-list {
+		display: flex;
+		justify-content: space-around;
+		a {
+			font-size: 20px;
+		}
+	}
+	.login-btn {
+		background-color: $main-color;
+		width: 100px;
+		color: #fff;
+	}
+	.login-btn:hover {
+		background-color: $main-color;
+	}
+}

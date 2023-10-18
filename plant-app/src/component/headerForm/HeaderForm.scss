@@ -1,0 +1,20 @@
+@import "../../globalFiles/variables.scss";
+
+.header-form {
+  h3 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+    a {
+      padding: 30px;
+    }
+    a:hover {
+      color: $main-color;
+      border-bottom: 1px solid $main-color;
+    }
+    a:focus {
+      color: $main-color;
+      border-bottom: 1px solid $main-color;
+    }
+  }
+}

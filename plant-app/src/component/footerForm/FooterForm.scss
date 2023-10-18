@@ -1,0 +1,38 @@
+@import "../../globalFiles/variables.scss";
+
+.footer-form {
+  .parant {
+    display: flex;
+    font-size: 18px;
+    height: 80px;
+    .other-contanu {
+      display: flex;
+      justify-content: space-between;
+      .facebook {
+        color: #337fff;
+      }
+      .facebook,
+      .google {
+        margin: 5px 13px;
+      }
+      a,
+      a:hover {
+        display: flex;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        color: $main-color;
+        justify-items: flex-start;
+        font-size: 20px;
+        // width: 100%;
+      }
+    }
+    .contanue-with {
+      font-size: 80%;
+      max-height: 80px;
+      overflow: hidden;
+    }
+    .line {
+      margin-top: 40px;
+    }
+  }
+}

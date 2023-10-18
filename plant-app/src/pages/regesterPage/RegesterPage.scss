@@ -1,0 +1,29 @@
+@import "../../globalFiles/variables.scss";
+
+.regester-form {
+  padding-bottom: 150px;
+  form {
+    padding: 30px 70px;
+    line-height: 80px;
+    .user-name {
+      text-align: left;
+      .firt-name {
+        padding-right: 5px;
+      }
+      .last-name {
+        padding-left: 5px;
+      }
+    }
+    .password {
+      text-align: left;
+    }
+  }
+}
+
+.error {
+  border: 1px solid $error-color;
+}
+
+.error-color {
+  color: $error-color;
+}

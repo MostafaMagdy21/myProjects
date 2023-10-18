@@ -1,0 +1,34 @@
+.about-us {
+	padding: 70px 40px;
+	overflow: hidden;
+	h2 {
+		width: 280px;
+		height: 100px;
+		font-weight: bold;
+		line-height: 80px;
+		text-align: left;
+	}
+	p {
+		text-align: left;
+		line-height: 2rem;
+		color: #8d8d8d;
+		padding: 50px;
+		font-size: 1.4rem;
+	}
+	.about-us-img {
+		height: 320px;
+		width: 469px;
+		border-radius: 10px;
+		margin: 30px 50px;
+		padding: 0px;
+		border: 1px solid #1abc00;
+		position: relative;
+		img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 50px;
+			right: -50px;
+		}
+	}
+}
