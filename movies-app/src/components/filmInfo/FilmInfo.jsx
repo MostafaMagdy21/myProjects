@@ -9,6 +9,7 @@ const FilmInfo = ({ fetchForSearch }) => {
 	const { id } = useParams();
 	console.log(id);
 	const [movie, setMovie] = useState([]);
+	const [flag, setFlag] = useState(false);
 
 	// get movie detiles
 	const getMovieDetils = async () => {
@@ -29,15 +30,23 @@ const FilmInfo = ({ fetchForSearch }) => {
 	useEffect(() => {
 		getMovieDetils();
 	}, []);
+
+	const onClickFilmDir = () => {
+		if (movie.homepage) {
+			setFlag(true);
+		} else {
+			alert("the film has no link");
+		}
+	};
 	return (
 		<>
 			<HeaderComponent fetchForSearch={fetchForSearch} />
 			<div className="film-info">
 				<Container>
 					<Row className="film-row">
-						<Col md={3}>
+						<Col md={3} className="img">
 							<img
-								// src={`https://api.themoviedb.org/3/movie/${id}?api_key=9a8b81bb6c9e7baea26bb66ca8665e77/${movie.poster_path}`}
+								src={`https://images.tmdb.org/t/p/w500${movie.poster_path}`}
 								alt="movie-poster.jpg"
 							/>
 						</Col>
@@ -58,7 +67,13 @@ const FilmInfo = ({ fetchForSearch }) => {
 					</Row>
 					<div className="buttons">
 						<Link to={"/"}>العودة للرئيسية</Link>
-						<a href={movie.homepage}>زيارة الفيلم</a>
+						<a
+							href={movie.homepage}
+							onClick={onClickFilmDir}
+							target={flag && "blank"}
+						>
+							زيارة الفيلم
+						</a>
 					</div>
 				</Container>
 			</div>
