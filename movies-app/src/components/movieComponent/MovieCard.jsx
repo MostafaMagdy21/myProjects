@@ -12,10 +12,10 @@ export const MovieCard = ({ movie }) => {
 						src={`https://images.tmdb.org/t/p/w500${movie.poster_path}`}
 					/>
 					<Card.Body>
-						<h3>{movie.original_title}</h3>
-						<h4>{`تاريخ الفيلم: ${movie.release_date}`}</h4>
-						<h4>{`عدد المقيمين: ${movie.vote_count}`}</h4>
-						<h4>{`التقييم: ${movie.vote_average}`}</h4>
+						<h5>{movie.original_title}</h5>
+						<h5>{`تاريخ الفيلم: ${movie.release_date}`}</h5>
+						<h5>{`عدد المقيمين: ${movie.vote_count}`}</h5>
+						<h5>{`التقييم: ${movie.vote_average}`}</h5>
 
 						<Link to={`/movie/${movie.id}`} className="btn">
 							Go somewhere

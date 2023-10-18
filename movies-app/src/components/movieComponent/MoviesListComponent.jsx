@@ -17,8 +17,11 @@ export const MoviesListComponent = ({
 			<Container>
 				<Row>
 					<div className="movieList">
-						{data.length &&
-							data.map((movie, i) => <MovieCard key={i} movie={movie} />)}
+						{data.length ? (
+							data.map((movie, i) => <MovieCard key={i} movie={movie} />)
+						) : (
+							<h1>There Are No Movies Now</h1>
+						)}
 					</div>
 				</Row>
 				<Row>

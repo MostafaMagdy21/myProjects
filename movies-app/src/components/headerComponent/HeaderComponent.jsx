@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Form, InputGroup, Row, Container, Col } from "react-bootstrap";
 import "./HeaderComponent.scss";
 import { AiOutlineSearch } from "react-icons/ai";
+import logo2 from "../../imges/logo2.png";
 export const HeaderComponent = ({ fetchForSearch }) => {
 	const [searchType, setSearchType] = useState("");
 
@@ -13,7 +14,7 @@ export const HeaderComponent = ({ fetchForSearch }) => {
 					<Col md={2}>
 						<div className="logo">
 							<Link to={"/"}>
-								<img src="logo2.png" alt="logo2" />
+								<img src={logo2} alt="logo2" />
 							</Link>
 						</div>
 					</Col>

@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./FilmInfo.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import HeaderComponent from "../headerComponent/HeaderComponent";
+import axios from "axios";
 
-const FilmInfo = ({ fetchForSearch, data }) => {
+const FilmInfo = ({ fetchForSearch }) => {
 	const { id } = useParams();
-	console.log(data[id]);
+	console.log(id);
+	const [movie, setMovie] = useState([]);
+
+	// get movie detiles
+	const getMovieDetils = async () => {
+		try {
+			const movieDetils = await axios.get(
+				`https://api.themoviedb.org/3/movie/${id}?api_key=9a8b81bb6c9e7baea26bb66ca8665e77&language=ar`
+			);
+			if (movieDetils) {
+				setMovie(movieDetils.data);
+			} else {
+				throw new Error();
+			}
+		} catch (e) {
+			console.log("error catching");
+		}
+	};
+	// getMovieDetils();
+	useEffect(() => {
+		getMovieDetils();
+	}, []);
 	return (
 		<>
 			<HeaderComponent fetchForSearch={fetchForSearch} />
@@ -14,31 +36,29 @@ const FilmInfo = ({ fetchForSearch, data }) => {
 				<Container>
 					<Row className="film-row">
 						<Col md={3}>
-							<img src="movie-poster.jpg" alt="movie-poster.jpg" />
+							<img
+								// src={`https://api.themoviedb.org/3/movie/${id}?api_key=9a8b81bb6c9e7baea26bb66ca8665e77/${movie.poster_path}`}
+								alt="movie-poster.jpg"
+							/>
 						</Col>
 						<Col md={9} className="film-global-info">
-							<h2>{`اسم الفيلم: ${"لتكن مذبحة"}`}</h2>
-							<h2>{`تاريخ الفيلم: ${"لتكن مذبحة"}`}</h2>
-							<h2>{`عدد المقيمين: ${"لتكن مذبحة"}`}</h2>
-							<h2>{`التقييم: ${"لتكن مذبحة"}`}</h2>
+							<h3>{`اسم الفيلم: ${movie.original_title}`}</h3>
+							<h3>{`تاريخ الفيلم: ${movie.release_date}`}</h3>
+							<h3>{`عدد المقيمين: ${movie.vote_count}`}</h3>
+							<h3>{`التقييم: ${movie.vote_average}`}</h3>
 						</Col>
 					</Row>
 					<Row>
 						<Col>
 							<div className="story">
 								<h2>القصة:</h2>
-								<p>
-									{`Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-								qui similique quo voluptas impedit ratione corporis laborum
-								mollitia molestiae, error voluptates aperiam est laudantium quos
-								cumque harum placeat deserunt? Porro?`}
-								</p>
+								<p>{movie.overview ? movie.overview : <h4>no story</h4>}</p>
 							</div>
 						</Col>
 					</Row>
 					<div className="buttons">
 						<Link to={"/"}>العودة للرئيسية</Link>
-						<Link>زيارة الفيلم</Link>
+						<a href={movie.homepage}>زيارة الفيلم</a>
 					</div>
 				</Container>
 			</div>
