@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const MovieCard = ({ movie }) => {
 	return (
-		<Col lg={3} md={4} sm={6} xs={12}>
+		<Col xxl={2} lg={3} md={4} sm={6} xs={12}>
 			<div className="content">
 				<Card>
 					<Card.Img

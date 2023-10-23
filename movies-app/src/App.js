@@ -1,19 +1,10 @@
 import "./App.css";
 import FooterComponent from "./components/footerComponent/FooterComponent";
-import HeaderComponent from "./components/headerComponent/HeaderComponent";
-import {
-	RouterProvider,
-	createBrowserRouter,
-	createRoutesFromElements,
-	Route,
-	useParams,
-} from "react-router-dom";
-// import Routing from "./global/Routing";
+import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import MoviesListComponent from "./components/movieComponent/MoviesListComponent";
 import FilmInfo from "./components/filmInfo/FilmInfo";
-import ErrorPage from "./components/errorPage/ErrorPage";
 
 function App() {
 	// array of all movies
@@ -77,10 +68,10 @@ function App() {
 			throw new Error(e);
 		}
 	};
-	// routing
-	const router = createBrowserRouter(
-		createRoutesFromElements(
-			<Route>
+
+	return (
+		<div className="App" dir="rtl" lang="ar">
+			<Routes>
 				<Route
 					path="/"
 					element={
@@ -94,18 +85,9 @@ function App() {
 				/>
 				<Route
 					path="/movie/:id"
-					element={<FilmInfo data={data} fetchForSearch={fetchForSearch} />}
+					element={<FilmInfo fetchForSearch={fetchForSearch} />}
 				/>
-				<Route path="*" element={<ErrorPage />} />
-			</Route>
-		)
-	);
-	// const er = useParams();
-	// console.log(er);
-	return (
-		<div className="App" dir="rtl" lang="ar">
-			{/* <HeaderComponent fetchForSearch={fetchForSearch} /> */}
-			<RouterProvider router={router} />
+			</Routes>
 			<FooterComponent />
 		</div>
 	);
