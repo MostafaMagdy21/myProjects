@@ -7,9 +7,9 @@ export const FooterComponent = () => {
 		<div className="footer">
 			<Container>
 				<Row>
-					<Col>contact</Col>
-					<Col>list</Col>
-					<Col>logo</Col>
+					<Col></Col>
+					<Col></Col>
+					<Col></Col>
 				</Row>
 			</Container>
 		</div>

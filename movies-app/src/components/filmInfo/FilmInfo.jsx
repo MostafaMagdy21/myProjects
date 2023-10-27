@@ -7,7 +7,6 @@ import axios from "axios";
 
 const FilmInfo = ({ fetchForSearch }) => {
 	const { id } = useParams();
-	console.log(id);
 	const [movie, setMovie] = useState([]);
 	const [flag, setFlag] = useState(false);
 
@@ -15,7 +14,7 @@ const FilmInfo = ({ fetchForSearch }) => {
 	const getMovieDetils = async () => {
 		try {
 			const movieDetils = await axios.get(
-				`https://api.themoviedb.org/3/movie/${id}?api_key=9a8b81bb6c9e7baea26bb66ca8665e77&language=ar`
+				`https://api.themoviedb.org/3/movie/${id}?api_key=24aa4a429a94e476299d3bab7767e47d&language=ar`
 			);
 			if (movieDetils) {
 				setMovie(movieDetils.data);

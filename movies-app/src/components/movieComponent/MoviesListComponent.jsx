@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import "./movieList.scss";
 import { Container, Row } from "react-bootstrap";
 import Navigation from "./Navigation";
 import HeaderComponent from "../headerComponent/HeaderComponent";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllMovie } from "../../redux/actions/movieListAction";
 
 export const MoviesListComponent = ({
-	data,
+	fetchForSearch,
 	getPagesNumberFromApi,
 	pageCount,
-	fetchForSearch,
 }) => {
+	const dispatch = useDispatch();
+	const [data, setData] = useState([]);
+	useEffect(() => {
+		dispatch(getAllMovie());
+	}, []);
+	const moviesList = useSelector((state) => state.allMovies);
+	useEffect(() => {
+		setData(moviesList);
+	}, [moviesList]);
+
 	return (
 		<>
 			<HeaderComponent fetchForSearch={fetchForSearch} />
