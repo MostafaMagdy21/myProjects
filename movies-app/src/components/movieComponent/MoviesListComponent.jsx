@@ -7,11 +7,7 @@ import HeaderComponent from "../headerComponent/HeaderComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllMovie } from "../../redux/actions/movieListAction";
 
-export const MoviesListComponent = ({
-	fetchForSearch,
-	getPagesNumberFromApi,
-	pageCount,
-}) => {
+export const MoviesListComponent = () => {
 	const dispatch = useDispatch();
 	const [data, setData] = useState([]);
 	useEffect(() => {
@@ -24,7 +20,7 @@ export const MoviesListComponent = ({
 
 	return (
 		<>
-			<HeaderComponent fetchForSearch={fetchForSearch} />
+			<HeaderComponent />
 			<Container>
 				<Row>
 					<div className="movieList">
@@ -36,10 +32,7 @@ export const MoviesListComponent = ({
 					</div>
 				</Row>
 				<Row>
-					<Navigation
-						getPagesNumberFromApi={getPagesNumberFromApi}
-						pageCount={pageCount}
-					/>
+					<Navigation />
 				</Row>
 			</Container>
 		</>

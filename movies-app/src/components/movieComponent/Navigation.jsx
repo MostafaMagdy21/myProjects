@@ -1,11 +1,15 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
+import { getPagesNumberFromApi } from "../../redux/actions/movieListAction";
+import { useDispatch } from "react-redux";
 
-const Navigation = ({ getPagesNumberFromApi, pageCount }) => {
-	const handlePageClick = (data) => {
-		getPagesNumberFromApi(data.selected + 1);
-	};
+const Navigation = () => {
+	const dispatch = useDispatch();
 	const pageCounting = 500;
+
+	const handlePageClick = (data) => {
+		dispatch(getPagesNumberFromApi(data.selected + 1));
+	};
 	return (
 		<ReactPaginate
 			breakLabel="..."

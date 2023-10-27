@@ -17,3 +17,20 @@ export const searchMovieAction = (inputSearch) => {
 		dispatch({ type: ALLMOVIES, data: res.data.results, pages: 500 });
 	};
 };
+
+export const getPagesNumberFromApi = (numOfPages) => {
+	return async (dispatch) => {
+		try {
+			const res = await axios.get(
+				`https://api.themoviedb.org/3/discover/movie?api_key=24aa4a429a94e476299d3bab7767e47d&include_adult=false&include_video=false&language=ar&page=${numOfPages}`
+			);
+			if (res) {
+				dispatch({ type: ALLMOVIES, data: res.data.results, pages: 500 });
+			} else {
+				throw new Error();
+			}
+		} catch (e) {
+			alert("no internet");
+		}
+	};
+};
