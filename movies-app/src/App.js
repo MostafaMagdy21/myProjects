@@ -28,22 +28,6 @@ function App() {
 	};
 
 	// searching function
-	const fetchForSearch = async (inputSearch) => {
-		try {
-			if (inputSearch) {
-				const searchingData = await axios.get(
-					`https://api.themoviedb.org/3/search/movie?api_key=24aa4a429a94e476299d3bab7767e47d&query=${inputSearch}&include_adult=false&language=en-US&page=1`
-				);
-				setData(searchingData.data.results);
-			}
-			// } else {
-			// 	fetchingData();
-			// }
-		} catch (e) {
-			console.log(e);
-			throw new Error(e);
-		}
-	};
 
 	return (
 		<BrowserRouter>
@@ -53,17 +37,12 @@ function App() {
 						path="/"
 						element={
 							<MoviesListComponent
-								data={data}
 								getPagesNumberFromApi={getPagesNumberFromApi}
 								pageCount={pageCount}
-								fetchForSearch={fetchForSearch}
 							/>
 						}
 					/>
-					<Route
-						path="/movie/:id"
-						element={<FilmInfo fetchForSearch={fetchForSearch} />}
-					/>
+					<Route path="/movie/:id" element={<FilmInfo />} />
 				</Routes>
 				<FooterComponent />
 			</div>

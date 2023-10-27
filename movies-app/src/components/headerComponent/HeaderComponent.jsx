@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Form, InputGroup, Row, Container, Col } from "react-bootstrap";
 import "./HeaderComponent.scss";
 import { AiOutlineSearch } from "react-icons/ai";
 import logo2 from "../../imges/logo2.png";
-export const HeaderComponent = ({ fetchForSearch }) => {
+import { useDispatch } from "react-redux";
+import {
+	searchMovieAction,
+	getAllMovie,
+} from "../../redux/actions/movieListAction";
+export const HeaderComponent = () => {
 	const [searchType, setSearchType] = useState("");
+	const dispatch = useDispatch();
+
+	const fetchForSearch = (searchType) => {
+		if (searchType) {
+			dispatch(searchMovieAction(searchType));
+		} else {
+			dispatch(getAllMovie());
+		}
+	};
+	useEffect(() => {
+		fetchForSearch(searchType);
+	}, [searchType]);
 
 	return (
 		<div className="header">
@@ -25,10 +42,7 @@ export const HeaderComponent = ({ fetchForSearch }) => {
 								aria-label="Username"
 								aria-describedby="basic-addon1"
 								value={searchType}
-								onChange={(e) => {
-									fetchForSearch(e.target.value);
-									setSearchType(e.target.value);
-								}}
+								onChange={(e) => setSearchType(e.target.value)}
 							/>
 							<InputGroup.Text id="basic-addon1">
 								<button
