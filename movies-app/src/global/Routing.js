@@ -5,30 +5,13 @@ import { Route, Routes } from "react-router-dom";
 
 // routing
 
-export const Routing = ({
-	data,
-	getPagesNumberFromApi,
-	pageCount,
-	fetchForSearch,
-}) => {
-	<Routes>
-		<Route
-			path="/"
-			element={
-				<MoviesListComponent
-					data={data}
-					getPagesNumberFromApi={getPagesNumberFromApi}
-					pageCount={pageCount}
-					fetchForSearch={fetchForSearch}
-				/>
-			}
-		/>
-		<Route
-			path="/movie/:id"
-			element={<FilmInfo fetchForSearch={fetchForSearch} />}
-		/>
-		<Route path="*" element={<ErrorPage />} />
-	</Routes>;
+export const Routing = () => {
+	return (
+		<Routes>
+			<Route path="/" element={<MoviesListComponent />} />
+			<Route path="/movie/:id" element={<FilmInfo />} />
+		</Routes>
+	);
 };
 
 export default Routing;
